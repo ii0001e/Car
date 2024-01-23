@@ -1,10 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Car.Core.Domain
+﻿namespace Car.Models.CarData
 {
-    public class CarData
+    public class CarDataCreateUpdateViewModel
     {
-        [Key]
         public Guid? Id { get; set; }
         public string? Brand { get; set; }
         public string? Mark { get; set; }
@@ -13,6 +10,9 @@ namespace Car.Core.Domain
         public int EngineCapacity { get; set; }
         public string? FuelType { get; set; }
         public int EnginePower { get; set; }
+
+        //Database
+
         public DateTime CreatedAt { get; set; }
         public DateTime Modifieted { get; set; }
     }

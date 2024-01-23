@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car", "Car\Car.csproj", "{13C3C5B8-31E0-4A83-8015-B5E84047699B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Car", "Car\Car.csproj", "{13C3C5B8-31E0-4A83-8015-B5E84047699B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car.ApplicationServices", "Car.ApplicationServices\Car.ApplicationServices.csproj", "{43189F6D-1CF6-4F6E-82FC-4E40849E26BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Car.ApplicationServices", "Car.ApplicationServices\Car.ApplicationServices.csproj", "{43189F6D-1CF6-4F6E-82FC-4E40849E26BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car.Core", "Car.Core\Car.Core.csproj", "{BC28B418-3550-4F24-9B5E-DA2A86ED5AB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Car.Core", "Car.Core\Car.Core.csproj", "{BC28B418-3550-4F24-9B5E-DA2A86ED5AB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car.Data", "Car.Data\Car.Data.csproj", "{9D4BFCCF-E267-486D-9A7C-E743AD35188F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Car.Data", "Car.Data\Car.Data.csproj", "{9D4BFCCF-E267-486D-9A7C-E743AD35188F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car.CarTest", "Car.CarTest\Car.CarTest.csproj", "{676DE8CC-89B3-4134-8F7C-F3564B755B0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{9D4BFCCF-E267-486D-9A7C-E743AD35188F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D4BFCCF-E267-486D-9A7C-E743AD35188F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D4BFCCF-E267-486D-9A7C-E743AD35188F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{676DE8CC-89B3-4134-8F7C-F3564B755B0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{676DE8CC-89B3-4134-8F7C-F3564B755B0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{676DE8CC-89B3-4134-8F7C-F3564B755B0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{676DE8CC-89B3-4134-8F7C-F3564B755B0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

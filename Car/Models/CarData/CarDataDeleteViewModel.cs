@@ -1,10 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Car.Core.Domain
+﻿namespace Car.Models.CarData
 {
-    public class CarData
+    public class CarDataDeleteViewModel
     {
-        [Key]
         public Guid? Id { get; set; }
         public string? Brand { get; set; }
         public string? Mark { get; set; }

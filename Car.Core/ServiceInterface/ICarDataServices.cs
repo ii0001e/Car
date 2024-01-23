@@ -1,5 +1,5 @@
-﻿using Car.Core.Dto;
-using Car.Core.Domain;
+﻿using Car.Core.Domain;
+using Car.Core.Dto;
 
 namespace Car.Core.ServiceInterface
 {
