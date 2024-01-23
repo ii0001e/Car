@@ -2,7 +2,7 @@
 
 namespace Car.Core.Domain
 {
-    public class Car
+    public class CarData
     {
         [Key]
         public Guid? Id { get; set; }
@@ -12,7 +12,7 @@ namespace Car.Core.Domain
         public int BuildingYear { get; set; }
         public int EngineCapacity { get; set; }
         public string FuelType { get; set; }
-        public int? MaxSpeed { get; set; }
+        public int EnginePower { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime Modifieted { get; set; }
     }

@@ -4,14 +4,14 @@ using Car.Core.Domain;
 
 namespace Car.Data
 {
-    public class CarContext
+    public class CarContext : DbContext
     {
         public CarContext
             (
-             DbContextOptions<CarContext> options
-        ) : base(options) { }
+            DbContextOptions<CarContext> options
+            ) : base(options) { }
 
-        public DbSet<Car> Cars { get; set; }
+        public DbSet<CarData> Cars { get; set; }
 
     }
 }

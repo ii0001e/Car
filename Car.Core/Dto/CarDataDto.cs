@@ -1,6 +1,6 @@
 ﻿namespace Car.Core.Dto
 {
-    public class CarDto
+    public class CarDataDto
     {
         public Guid? Id { get; set; }
         public string Brand { get; set; }
@@ -9,7 +9,7 @@
         public int BuildingYear { get; set; }
         public int EngineCapacity { get; set; }
         public string FuelType { get; set; }
-        public int? MaxSpeed { get; set; }
+        public int EnginePower { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime Modifieted { get; set; }
     }
