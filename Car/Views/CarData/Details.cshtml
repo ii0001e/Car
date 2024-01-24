@@ -1,57 +1,54 @@
 ﻿@model Car.Core.CarData.CarDataDetailsViewModel
 
-<div class="card-header">Details</div>
-<div class="card-body">
-    <div class="form-group row">
-        <label asp-for="Id" class="col-sm-2 col-form-label"></label>
-        @Html.DisplayFor(model => Model.Id)
+<div class="card">
+    <div class="card-header bg-primary text-white">Details</div>
+    <div class="card-body">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th class="font-weight-bold">ID</th>
+                    <td>@Html.DisplayFor(model => Model.Id, new { @class = "form-control-plaintext" })</td>
+                </tr>
+                <tr>
+                    <th class="font-weight-bold">Mark</th>
+                    <td>@Html.DisplayFor(model => Model.Mark, new { @class = "form-control-plaintext" })</td>
+                </tr>
+                <tr>
+                    <th class="font-weight-bold">Brand</th>
+                    <td>@Html.DisplayFor(model => Model.Brand, new { @class = "form-control-plaintext" })</td>
+                </tr>
+                <tr>
+                    <th class="font-weight-bold">Body Type</th>
+                    <td>@Html.DisplayFor(model => Model.BodyType, new { @class = "form-control-plaintext" })</td>
+                </tr>
+                <tr>
+                    <th class="font-weight-bold">Building Year</th>
+                    <td>@Html.DisplayFor(model => Model.BuildingYear, new { @class = "form-control-plaintext" })</td>
+                </tr>
+                <tr>
+                    <th class="font-weight-bold">Engine Capacity</th>
+                    <td>@Html.DisplayFor(model => Model.EngineCapacity, new { @class = "form-control-plaintext" })</td>
+                </tr>
+                <tr>
+                    <th class="font-weight-bold">Engine Power</th>
+                    <td>@Html.DisplayFor(model => Model.EnginePower, new { @class = "form-control-plaintext" })</td>
+                </tr>
+                <tr>
+                    <th class="font-weight-bold">Fuel Type</th>
+                    <td>@Html.DisplayFor(model => Model.FuelType, new { @class = "form-control-plaintext" })</td>
+                </tr>
+                <tr>
+                    <th class="font-weight-bold">Created At</th>
+                    <td>@Html.DisplayFor(model => Model.CreatedAt, new { @class = "form-control-plaintext" })</td>
+                </tr>
+                <tr>
+                    <th class="font-weight-bold">Modified</th>
+                    <td>@Html.DisplayFor(model => Model.Modifieted, new { @class = "form-control-plaintext" })</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-
-    <div class="form-group row">
-        <label asp-for="Mark" class="col-sm-2 col-form-label"></label>
-        @Html.DisplayFor(model => Model.Mark)
+    <div class="card-footer">
+        <a asp-action="index" class="btn btn-primary">Back</a>
     </div>
-
-    <div class="form-group row">
-        <label asp-for="Brand" class="col-sm-2 col-form-label"></label>
-        @Html.DisplayFor(model => Model.Brand)
-    </div>
-
-    <div class="form-group row">
-        <label asp-for="BodyType" class="col-sm-2 col-form-label"></label>
-        @Html.DisplayFor(model => Model.BodyType)
-    </div>
-
-    <div class="form-group row">
-        <label asp-for="BuildingYear" class="col-sm-2 col-form-label"></label>
-        @Html.DisplayFor(model => Model.BuildingYear)
-    </div>
-    <div class="form-group row">
-        <label asp-for="EngineCapacity" class="col-sm-2 col-form-label"></label>
-        @Html.DisplayFor(model => Model.EngineCapacity)
-    </div>
-    <div class="form-group row">
-        <label asp-for="EnginePower" class="col-sm-2 col-form-label"></label>
-        @Html.DisplayFor(model => Model.EnginePower)
-    </div>
-    <div class="form-group row">
-        <label asp-for="FuelType" class="col-sm-2 col-form-label"></label>
-        @Html.DisplayFor(model => Model.FuelType)
-    </div>
-
-    <div class="form-group row">
-        <label asp-for="CreatedAt" class="col-sm-2 col-form-label"></label>
-        @Html.DisplayFor(model => Model.CreatedAt)
-    </div>
-
-    <div class="form-group row">
-        <label asp-for="Modifieted" class="col-sm-2 col-form-label"></label>
-        @Html.DisplayFor(model => Model.Modifieted)
-    </div>
-
-
-<div>
-    <a asp-action="index" class="btn btn-primary" style="margin-top:10px;margin-left:1vw:">Back</a>
 </div>
-
-

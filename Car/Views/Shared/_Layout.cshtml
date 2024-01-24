@@ -7,6 +7,87 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Car.styles.css" asp-append-version="true" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container #main {
+            margin-top: 50px;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .card-header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px;
+        }
+
+        .card-body {
+            padding: 15px;
+        }
+
+        .form-details label {
+            font-weight: bold;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group.row {
+            margin-bottom: 1rem;
+        }
+
+        .col-form-label {
+            padding-top: calc(0.375rem + 1px);
+            padding-bottom: calc(0.375rem + 1px);
+            margin-bottom: 0;
+            font-size: inherit;
+            line-height: 1.5;
+        }
+
+        .form-control-plaintext {
+            display: block;
+            width: 100%;
+            padding: 0.375rem 0;
+            margin-bottom: 0;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #212529;
+            background-color: transparent;
+            border: solid transparent;
+            border-width: 1px 0;
+        }
+
+        .footer {
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .chasing-button {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+    </style>
+
 </head>
 <body>
     <header>
@@ -33,9 +114,11 @@
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div class="container" id="main">
         <main role="main" class="pb-3">
-            @RenderBody()
+            <div class="card">
+                @RenderBody()
+            </div>
         </main>
     </div>
 
@@ -50,5 +133,41 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
+
+    @if (ViewContext.RouteData.Values["action"].ToString() == "Index" && ViewContext.RouteData.Values["controller"].ToString() == "Home")
+    {
+
+    <button id="chasingButton" class="chasing-button" onclick="moveButton()">Go to CarData</button>
+
+    <script>
+
+            var chasingButton = document.getElementById("chasingButton");
+            var moveCount = 0;
+
+            function moveButton() {
+                if (moveCount < 4) {
+                    // Generate random position
+                    var maxX = window.innerWidth - chasingButton.clientWidth;
+                    var maxY = window.innerHeight - chasingButton.clientHeight;
+
+                    var randomX = Math.floor(Math.random() * maxX);
+                    var randomY = Math.floor(Math.random() * maxY);
+
+                    // Set the new position
+                    chasingButton.style.left = randomX + "px";
+                    chasingButton.style.top = randomY + "px";
+
+                    moveCount++;
+                } else {
+                    window.location.href = "/CarData/Index";
+                }
+            }
+        </script>
+
+
+    }
 </body>
+
+
+
 </html>

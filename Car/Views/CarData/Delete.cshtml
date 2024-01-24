@@ -1,65 +1,70 @@
 ﻿@model Car.Core.CarData.CarDataDeleteViewModel
 
-<div class="container">
-    <div class="accordion-header">
+<div class="card">
+    <div class="card-header bg-danger text-white">
         Delete
-
     </div>
-    <hr />
-    <div class="movetable">
-        <dl class="row">
-            <div class="form-group row">
-                <label asp-for="Id" class="col-sm-2 col-form-label"></label>
-                @Html.DisplayFor(model => Model.Id)
-            </div>
+    <div class="card-body">
+        <hr />
+        <div class="movetable">
+            <dl class="row">
+                <div class="form-group row">
+                    <dt class="col-sm-2 col-form-label font-weight-bold">ID</dt>
+                    <dd class="col-sm-10">@Html.DisplayFor(model => Model.Id)</dd>
+                </div>
 
-            <div class="form-group row">
-                <label asp-for="Mark" class="col-sm-2 col-form-label"></label>
-                @Html.DisplayFor(model => Model.Mark)
-            </div>
+                <div class="form-group row">
+                    <dt class="col-sm-2 col-form-label font-weight-bold">Mark</dt>
+                    <dd class="col-sm-10">@Html.DisplayFor(model => Model.Mark)</dd>
+                </div>
 
-            <div class="form-group row">
-                <label asp-for="Brand" class="col-sm-2 col-form-label"></label>
-                @Html.DisplayFor(model => Model.Brand)
-            </div>
+                <div class="form-group row">
+                    <dt class="col-sm-2 col-form-label font-weight-bold">Brand</dt>
+                    <dd class="col-sm-10">@Html.DisplayFor(model => Model.Brand)</dd>
+                </div>
 
-            <div class="form-group row">
-                <label asp-for="BodyType" class="col-sm-2 col-form-label"></label>
-                @Html.DisplayFor(model => Model.BodyType)
-            </div>
+                <div class="form-group row">
+                    <dt class="col-sm-2 col-form-label font-weight-bold">Body Type</dt>
+                    <dd class="col-sm-10">@Html.DisplayFor(model => Model.BodyType)</dd>
+                </div>
 
-            <div class="form-group row">
-                <label asp-for="BuildingYear" class="col-sm-2 col-form-label"></label>
-                @Html.DisplayFor(model => Model.BuildingYear)
-            </div>
-            <div class="form-group row">
-                <label asp-for="EngineCapacity" class="col-sm-2 col-form-label"></label>
-                @Html.DisplayFor(model => Model.EngineCapacity)
-            </div>
-            <div class="form-group row">
-                <label asp-for="EnginePower" class="col-sm-2 col-form-label"></label>
-                @Html.DisplayFor(model => Model.EnginePower)
-            </div>
-            <div class="form-group row">
-                <label asp-for="FuelType" class="col-sm-2 col-form-label"></label>
-                @Html.DisplayFor(model => Model.FuelType)
-            </div>
+                <div class="form-group row">
+                    <dt class="col-sm-2 col-form-label font-weight-bold">Building Year</dt>
+                    <dd class="col-sm-10">@Html.DisplayFor(model => Model.BuildingYear)</dd>
+                </div>
 
-            <div class="form-group row">
-                <label asp-for="CreatedAt" class="col-sm-2 col-form-label"></label>
-                @Html.DisplayFor(model => Model.CreatedAt)
-            </div>
+                <div class="form-group row">
+                    <dt class="col-sm-2 col-form-label font-weight-bold">Engine Capacity</dt>
+                    <dd class="col-sm-10">@Html.DisplayFor(model => Model.EngineCapacity)</dd>
+                </div>
 
-            <div class="form-group row">
-                <label asp-for="Modifieted" class="col-sm-2 col-form-label"></label>
-                @Html.DisplayFor(model => Model.Modifieted)
-            </div>
-        </dl>
+                <div class="form-group row">
+                    <dt class="col-sm-2 col-form-label font-weight-bold">Engine Power</dt>
+                    <dd class="col-sm-10">@Html.DisplayFor(model => Model.EnginePower)</dd>
+                </div>
+
+                <div class="form-group row">
+                    <dt class="col-sm-2 col-form-label font-weight-bold">Fuel Type</dt>
+                    <dd class="col-sm-10">@Html.DisplayFor(model => Model.FuelType)</dd>
+                </div>
+
+                <div class="form-group row">
+                    <dt class="col-sm-2 col-form-label font-weight-bold">Created At</dt>
+                    <dd class="col-sm-10">@Html.DisplayFor(model => Model.CreatedAt)</dd>
+                </div>
+
+                <div class="form-group row">
+                    <dt class="col-sm-2 col-form-label font-weight-bold">Modified</dt>
+                    <dd class="col-sm-10">@Html.DisplayFor(model => Model.Modifieted)</dd>
+                </div>
+            </dl>
+        </div>
     </div>
-    <hr />
-    <form asp-action="DeleteConfirmation">
-        <input type="hidden" asp-for="Id" />
-        <input type="submit" style="position: absolute; top:70%;" value="Delete" class="btn btn-danger" />
-        <a asp-action="index" style="position: absolute; top:70%; left: 14%;" class="btn btn-primary">Back</a>
-    </form>
+    <div class="card-footer">
+        <form asp-action="DeleteConfirmation">
+            <input type="hidden" asp-for="Id" />
+            <input type="submit" style="width: 10%;" value="Delete" class="btn btn-danger" />
+            <a asp-action="index" style="width: 10%; margin-left: 1%;" class="btn btn-primary">Back</a>
+        </form>
+    </div>
 </div>
