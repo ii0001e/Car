@@ -17,8 +17,8 @@
                 <th scope="col">Nr</th>
                 <th scope="col">Brand</th>
                 <th scope="col">Mark</th>
+                <th scope="col">BuildingYear</th>
                 <th scope="col">EngineCapacity</th>
-                <th scope="col">FuelType</th>
                 <th></th>
             </tr>
         </thead>
@@ -29,8 +29,8 @@
                     <td>@rowNumber</td>
                     <td>@carData.Brand</td>
                     <td>@carData.Mark</td>
+                    <td>@carData.BuildingYear</td>
                     <td>@carData.EngineCapacity</td>
-                    <td>@carData.FuelType</td>
                     <td>
                         <div style="display: flex; gap: 5px;">
                             <a asp-action="Details" asp-controller="CarData" asp-route-id="@carData.Id" class="btn btn-info">Details</a>

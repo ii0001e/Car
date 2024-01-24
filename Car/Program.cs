@@ -2,13 +2,16 @@ using Car.ApplicationServices.Services;
 using Car.Core.ServiceInterface;
 using Car.Data;
 using Microsoft.EntityFrameworkCore;
+using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
 builder.Services.AddDbContext<CarContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")), ServiceLifetime.Transient);
+builder.Services.AddScoped<CarContext>();
 //add dependence interface and service class
 builder.Services.AddScoped<ICarDataServices, CarDataServices>();
 
