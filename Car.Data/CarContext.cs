@@ -9,5 +9,7 @@ namespace Car.Data
 
         public DbSet<CarData> CarSet { get; set; }
 
+        public DbSet<AzureAppDbHosting> Leads { get; set; }
+
     }
 }

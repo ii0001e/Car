@@ -37,4 +37,8 @@
     <ProjectReference Include="..\Car.Core\Car.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\AzureAppDbHosting\" />
+  </ItemGroup>
+
 </Project>

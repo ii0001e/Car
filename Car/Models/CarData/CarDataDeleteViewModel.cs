@@ -1,4 +1,4 @@
-﻿namespace Car.Models.CarData
+﻿namespace Car.Core.CarData
 {
     public class CarDataDeleteViewModel
     {
