@@ -33,6 +33,10 @@ namespace Car.Controllers
                     Brand = x.Brand,
                     Mark = x.Mark,
                     BodyType = x.BodyType,
+                    FuelType = x.FuelType,
+                    BuildingYear = x.BuildingYear,
+                    EngineCapacity = x.EngineCapacity,
+
                 });
 
             return View(result);

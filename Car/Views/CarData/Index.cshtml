@@ -19,6 +19,7 @@
                 <th scope="col">Mark</th>
                 <th scope="col">BuildingYear</th>
                 <th scope="col">EngineCapacity</th>
+                <th scope="col">FuelType</th>
                 <th></th>
             </tr>
         </thead>
@@ -27,10 +28,11 @@
             {
                 <tr>
                     <td>@rowNumber</td>
-                    <td>@carData.Brand</td>
-                    <td>@carData.Mark</td>
-                    <td>@carData.BuildingYear</td>
-                    <td>@carData.EngineCapacity</td>
+                    <td>@(string.IsNullOrEmpty(carData.Brand) ? "N/A" : carData.Brand)</td>
+                    <td>@(string.IsNullOrEmpty(carData.Mark) ? "N/A" : carData.Mark)</td>
+                    <td>@(carData.BuildingYear == 0 ? "N/A" : carData.BuildingYear.ToString())</td>
+                    <td>@(carData.EngineCapacity == 0 ? "N/A" : carData.EngineCapacity.ToString())</td>
+                    <td>@(string.IsNullOrEmpty(carData.FuelType) ? "N/A" : carData.FuelType)</td>
                     <td>
                         <div style="display: flex; gap: 5px;">
                             <a asp-action="Details" asp-controller="CarData" asp-route-id="@carData.Id" class="btn btn-info">Details</a>
